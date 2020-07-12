@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sklearn Prediction Home</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+  <script src="{{ url_for('static',filename='script.js') }}"></script>
+</head>
+
+<body>
+  <header class="center-layout">
+    <h1 class="title">🏠 Sklearn Prediction Home</h1>
+  </header>
+
+  <div id="mainContent" class="center-layout">
+    <h2 class="subtitle">Input</h2>
+    <div class="input-form">
+      <div class="grid-layout">
+        <div class="input-group">
+          <label class="input-group__label">CHAS</label>
+          <span class="input-group__description">Charles River dummy variable (= 1 if tract bounds river; 0
+            otherwise).</span>
+          <input class="input-group__field" type="number" min="0" id="CHAS">
+        </div>
+        <div class="input-group">
+          <label class="input-group__label">RM</label>
+          <span class="input-group__description">average number of rooms per dwelling</span>
+          <input class="input-group__field" type="number" min="0" id="RM">
+        </div>
+        <div class="input-group">
+          <label class="input-group__label">TAX</label>
+          <span class="input-group__description">full-value property-tax rate per \$10,000</span>
+          <input class="input-group__field" type="number" min="0" id="TAX">
+        </div>
+        <div class="input-group">
+          <label class="input-group__label">PTRATIO</label>
+          <span class="input-group__description">pupil-teacher ratio by town</span>
+          <input class="input-group__field" type="number" min="0" id="PTRATIO">
+        </div>
+        <div class="input-group">
+          <label class="input-group__label">B</label>
+          <span class="input-group__description">1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town</span>
+          <input class="input-group__field" type="number" min="0" id="B">
+        </div>
+        <div class="input-group">
+          <label class="input-group__label">LSTAT</label>
+          <span class="input-group__description">lower status of the population (percent)</span>
+          <input class="input-group__field" type="number" min="0" id="LSTAT">
+        </div>
+      </div>
+      <button onclick="predict()">Predict</button>
+    </div>
+
+    <h2 class="subtitle">Output</h2>
+    <span id="output"></span>
+  </div>
+
+  <footer class="center-layout">
+    Frontend by <a class="underline-hover" href="https://pawankolhe.com" target="_blank">Pawan Kolhe</a>
+  </footer>
+</body>
+
+</html>

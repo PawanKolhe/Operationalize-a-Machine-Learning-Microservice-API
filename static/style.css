@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 1;
+  outline: none;
+}
+
+html,
+body {
+  height: auto;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  position: relative;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+}
+
+#mainContent {
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  padding: 30px 0;
+}
+footer {
+  padding: 30px;
+  text-align: center;
+  font-family: monospace, sans-serif;
+}
+
+.title {
+  color: rgb(93, 64, 55);
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(93, 64, 55, 0.01);
+  border: 2px solid rgb(93, 64, 55, 0.1);
+  border-radius: 10px;
+}
+.subtitle {
+  padding: 10px 0;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+}
+.center-layout {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.underline-hover:hover {
+  border-bottom: 2px dotted;
+  cursor: pointer;
+}
+
+.input-form {
+  padding: 20px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+#output {
+  padding: 20px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  display: block;
+  font-size: 1.3rem;
+  min-height: 64px;
+}
+
+.input-group {
+  margin-bottom: 10px;
+  margin-right: 15px;
+}
+
+.input-group__label {
+  display: block;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.input-group__description {
+  display: block;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.input-group__field {
+  display: block;
+  font-size: 1.1rem;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: rgba(93, 64, 55, 0.6);
+  color: white;
+  font-weight: bold;
+}
+button:hover {
+  background-color: rgba(93, 64, 55, 0.55);
+  cursor: pointer;
+}
+button:active {
+  transform: translateY(1.5px);
+}
+
+@media screen and (max-width: 600px) {
+  #mainContent {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .center-layout {
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .grid-layout {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+
+  .input-group__field {
+    width: 100%;
+  }
+} 

@@ -5,6 +5,7 @@ import logging
 import pandas as pd
 from sklearn.externals import joblib
 from sklearn.preprocessing import StandardScaler
+from flask.templating import render_template
 
 app = Flask(__name__)
 LOG = create_logger(app)
@@ -20,8 +21,9 @@ def scale(payload):
 
 @app.route("/")
 def home():
-    html = f"<h3>Sklearn Prediction Home</h3>"
-    return html.format(format)
+    # html = f"<h3>Sklearn Prediction Home</h3>"
+    # return html.format(format)
+    return render_template('index.html')
 
 @app.route("/predict", methods=['POST'])
 def predict():

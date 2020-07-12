@@ -20,6 +20,16 @@ Goal is to operationalize this working, machine learning microservice using [kub
 * Integrate with CircleCI to indicate that your code has been tested
 
 ---
+## Files Explaination
+
+`Dockerfile` - Contains commands used to create a docker image  
+`Makefile` - Contains useful set of commands to setup environment, run tests and run lints  
+`app.py` - Python flask app that returns predictions about housing prices when requested using API calls  
+`make_prediction.sh` - Send API request to Flash app running and receives response  
+`run_docker.sh` - Script to build and run docker image locally  
+`upload_docker.sh` - Script to tag and upload docker image to docker hub  
+`run_kubernetes.sh` - Script to setup and run app on kubernetes  
+`.circleci/config.yml`: CircleCI configuration file for running the tests  
 
 ## Intall
 
